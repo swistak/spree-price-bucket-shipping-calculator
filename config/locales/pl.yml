@@ -1,0 +1,27 @@
+pl:
+  activerecord: 
+    attributes: 
+      price_bucket_shipping_rate: 
+        price_floor: "Od kwoty"
+        price_ceiling: "Do kwoty"
+        shipping_rate: "Opłata za dostawę:"
+    models: 
+      price_bucket_shipping_rate: 
+        one: "Przedział cenowy"
+        other: "Przedziały cenowe"
+    errors:
+      models:
+        price_bucket_shipping_rate:
+          taken: "już istnieje dla danej strefy"
+  price_bucket_shipping_rates_description: Edycja przedziałów cenowych przy dostawie zależnej od ceny
+  new_price_bucket_shipping_rate: "Nowy przedział cenowy"
+  editing: "Edytuje"
+  default_amount: "domyślna stawka"
+  configure_price_bucket_rates: Możesz teraz ustawić stawki dla poszczególnych przediałów cenowych
+  price_bucket_list_information: "
+    Obliczanie kosztów dostawy jest oparte na przedziałach cenowych.
+    By używać kalkulatora uzależniającego koszty dostawy od ceny, musisz
+    stworzyć przedziały cenowe bez przerw pomiędzy nimi.
+    Domyślnie brana jest domyślna kwota wybrana przy tworzeniu kalkulatora.
+    Dla kwot zamówienia większych niż największy ustawiony przedział, brana jest kwota z ostatniego przedziału.
+    "

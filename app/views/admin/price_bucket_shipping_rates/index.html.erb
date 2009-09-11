@@ -9,15 +9,13 @@
 
 <h1><%= PriceBucketShippingRate.human_name(:count => 2) %></h1>
 <p>
-	Calculation of Shipping Rates is determined by order sub-totals.  To utilize this calculator, establish 
-	your shipping categories and shipping methods and then define your pricing buckets with no gaps between
-	each range. 
+	<%= t(:price_bucket_list_information) %>
 </p>
 
 <table class="index">
 	<thead>
 		<tr>
-			<th><%= PriceBucketShippingRate.human_attribute_name("calculator")%></th>
+			<th><%= t("calculator")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("price_floor")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("price_ceiling")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("shipping_rate")%></th>

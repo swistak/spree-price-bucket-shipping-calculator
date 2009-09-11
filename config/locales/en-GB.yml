@@ -16,3 +16,10 @@ en-GB:
   price_bucket_shipping_rates_description: Manage rates and associated Shipping Categories for use with the Price Bucket Shipping Rates Extension
   new_price_bucket_shipping_rate: "New Price Bucket Shipping Rate"
   editing: "Editing"
+  default_amount: "amount to use when no rates are defined"
+  configure_price_bucket_rates: You can now configure rates
+  price_bucket_list_information: "
+    Calculation of Shipping Rates is determined by order sub-totals.
+    To utilize this calculator, establish your shipping categories
+    and shipping methods and then define your pricing buckets with
+    no gaps between each range."

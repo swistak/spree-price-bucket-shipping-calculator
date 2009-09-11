@@ -8,7 +8,15 @@ class Admin::PriceBucketShippingRatesController < Admin::BaseController
   end
 
   create.response do |wants|
-    wants.html { redirect_to collection_url }
+    wants.html { 
+      if params["create_another"]
+        rate = params["price_bucket_shipping_rate"].dup
+        rate[:price_floor] = rate.delete(:price_ceiling)
+        redirect_to new_object_url+"?"+({"price_bucket_shipping_rate" => rate}.to_param)
+      else
+        redirect_to collection_url 
+      end
+    }
   end
     
   private

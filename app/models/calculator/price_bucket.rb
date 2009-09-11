@@ -2,8 +2,7 @@ class Calculator::PriceBucket < Calculator
   has_one :price_bucket_shipping_rate, :as => :calculator
   
   preference :default_amount, :decimal, :default => 0
-  preference :name, :string
-
+  
   def self.description
     I18n.t("price_bucket")
   end
@@ -27,6 +26,6 @@ class Calculator::PriceBucket < Calculator
   end
 
   def name
-    self.preferred_name
+    calculable.respond_to?(:name) ? calculable.name : calculable.to_s
   end
 end

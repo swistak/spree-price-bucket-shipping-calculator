@@ -2,6 +2,11 @@ Price Bucket Shipping Rate
 ==========================
 **Supports Spree >= 0.9.x**
 
+Original code by Michael Lang
+Adapted for new calculators by Marcin Raczkowski.
+
+old version that works with 0.8 code can be found at http://github.com/mwlang/spree-price-bucket-shipping-calculator/tree/master
+
 The Price Bucket Shipping Rate Calculator allows you to define shipping costs based on the order's sub-total
 and shipping method.
 
@@ -18,24 +23,6 @@ Each PriceBucketShippingRate contains the following values:
 3. **Price Ceiling:** This is the upper end of the price range for defining the "price bucket"   The value is inclusive.
 
 4. **Shipping Rate:** Is the shipping charge to apply to the order for order's whose sub-totals fall within this price bucket.
-
-
-Examples
-========
-The sample data contained with this extension shows how to configure Spree to support multiple
-PriceBucketShippingRates broken down by three different _Calculators_.
-
-       Calculator                 Price Floor       Price Ceiling        Shipping Rate               -------------------------------------------------------------------------------------------
-       Standard Shipping            $   0.00           $  15.00             $  4.00
-       Standard Shipping            $  15.01           $  35.00             $  8.00
-       Standard Shipping            $  35.01           $ 100.00             $ 16.00
-       Standard Shipping            $ 100.01           $ 999.00             $  0.00
-
-       Express Shipping             $  0.00            $  15.00             $  8.00
-       Express Shipping             $ 15.01            $  35.00             $ 16.00
-       Express Shipping             $ 35.01            $ 999.00             $ 32.00
-       Express Shipping            $ 100.01            $ 999.00             $ 16.00
-
 
 Quick Start
 ===========
