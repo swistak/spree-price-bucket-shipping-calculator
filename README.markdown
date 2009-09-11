@@ -1,15 +1,17 @@
 Price Bucket Shipping Rate
 ==========================
-**Supports Spree >= 0.8.x**
+**Supports Spree >= 0.9.x**
 
 The Price Bucket Shipping Rate Calculator allows you to define shipping costs based on the order's sub-total
 and shipping method.
 
-When installed, a new "Price Bucket Shipping Rates" link is added to the Configuration area in the Spree administration interface. Here you can define as many different rates as required, and link them to the relevant Shipping Methods
+When installed, a new "Price Bucket Shipping Rates" link is added to the Configuration area in the Spree administration interface. 
+There after creating named PriceBucket calculator you can define as many different rates as required,
+and link them to the relevant Calculator.
 
 Each PriceBucketShippingRate contains the following values:
 
-1. **Shipping Method:** Each PriceBucketShippingRate is associated with a _Shipping Method_, which is used to link products to particular rates. 
+1. **Calculator:** Each PriceBucketShippingRate is associated with a _Calculator_, which is used to calculate charges.
 
 2. **Price Floor:** This is the lower end of the price range for defining the "price bucket".  The value is inclusive.
 
@@ -20,9 +22,10 @@ Each PriceBucketShippingRate contains the following values:
 
 Examples
 ========
-The sample data contained with this extension shows how to configure Spree to support multiple PriceBucketShippingRates broken down by three different _Shipping Methods_.
+The sample data contained with this extension shows how to configure Spree to support multiple
+PriceBucketShippingRates broken down by three different _Calculators_.
 
-       Shipping Method              Price Floor       Price Ceiling        Shipping Rate               -------------------------------------------------------------------------------------------
+       Calculator                 Price Floor       Price Ceiling        Shipping Rate               -------------------------------------------------------------------------------------------
        Standard Shipping            $   0.00           $  15.00             $  4.00
        Standard Shipping            $  15.01           $  35.00             $  8.00
        Standard Shipping            $  35.01           $ 100.00             $ 16.00
@@ -38,7 +41,7 @@ Quick Start
 ===========
 1. Install extension:
 
-    `script/extension install git://github.com/mwlang/spree-price-bucket-shipping-rate.git `
+    `script/extension install git://github.com/swistak/spree-price-bucket-shipping-rate.git `
 
 2. Migrate the database (or bootstrap if you want the sample data for testing)
 

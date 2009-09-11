@@ -21,5 +21,7 @@ class PriceBucketShippingCalculatorExtension < Spree::Extension
             :description => t('price_bucket_shipping_rates_description')}
       end
     end
+
+    Calculator::PriceBucket.register
   end
 end

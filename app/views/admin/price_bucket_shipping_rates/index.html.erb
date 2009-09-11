@@ -17,7 +17,7 @@
 <table class="index">
 	<thead>
 		<tr>
-			<th><%= PriceBucketShippingRate.human_attribute_name("shipping_method")%></th>
+			<th><%= PriceBucketShippingRate.human_attribute_name("calculator")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("price_floor")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("price_ceiling")%></th>
 			<th><%= PriceBucketShippingRate.human_attribute_name("shipping_rate")%></th>
@@ -27,7 +27,7 @@
 	<tbody>
 		<% @price_bucket_shipping_rates.sort.each do |rate| %>
 		<tr>
-			<td><%=rate.shipping_method.name %></td>
+			<td><%=rate.calculator.name %></td>
 			<td><%=number_to_currency(rate.price_floor) %></td>
 			<td><%=number_to_currency(rate.price_ceiling) %></td>
 			<td><%=number_to_currency(rate.shipping_rate) %></td>
