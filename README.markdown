@@ -28,7 +28,7 @@ Quick Start
 ===========
 1. Install extension:
 
-    `script/extension install git://github.com/swistak/spree-price-bucket-shipping-rate.git `
+    `script/extension install git://github.com/swistak/spree-price-bucket-shipping-calculator.git`
 
 2. Migrate the database (or bootstrap if you want the sample data for testing)
 
